@@ -1,0 +1,113 @@
+@media (max-width: 1180px) {
+    .service_wrapper {
+        flex-wrap: wrap;
+    }
+}
+@media (max-width: 1024px) {
+    .item_service {
+        text-align: center;
+    }
+    .nerds_wrapper {
+        text-align: center;
+    }
+    .nav_toogle {
+        display: inline-block;
+    }
+    .nav ul li {
+        margin-bottom: 25px;
+    }
+    #nav_toogle:checked ~ ul {
+        display: flex;
+        flex-direction: column;
+    }
+    .nav ul {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #000000;
+        opacity: 0.9;
+        padding: 5%;
+        max-width: 300px;
+        height: 100%;
+    }
+    .nav ul li a {
+        color: white;
+    }
+    .brand_wrapper {
+        flex-wrap: wrap;
+    }
+    .brand_wrapper .margin:not(:last-child) {
+        margin-bottom: 15px;
+    }
+}
+@media (max-width: 1000px) and (min-width: 880px) {
+    .item_service:not(:last-child) {
+        margin-right: 40px;
+    }
+}
+@media (max-width: 850px) {
+    .header_bot {
+        flex-direction: column;
+    }
+    .frame {
+        position: static;
+        margin: 0 auto;
+    }
+    .about_wrapper {
+        flex-direction: column;
+    }
+    .about_info .nerds_il {
+        margin-top: 50px;
+    }
+}
+@media (max-width: 780px) {
+    .slide_head {
+        display: none;
+    }
+    .about {
+        padding-top: 10px;
+    }
+    .footer {
+        padding: 20px 0;
+    }
+    .footer_wrapper {
+        flex-wrap: wrap-reverse;
+    }
+    .slogan {
+        margin-bottom: 20px;
+    }
+}
+@media (max-width: 400px) {
+    .about_info .nerds_il {
+        width: 300px;
+    }
+    .header_top {
+        flex-direction: column;
+    }
+    .header_bot_info h2 {
+        font-size: 40px;
+    }
+}
+@media (max-width: 350px) {
+    .item_service:not(:last-child) {
+        margin-right: 0;
+    }
+    .nerds_wrapper {
+        flex-direction: column;
+    }
+}
+@media (max-width: 333px) {
+    .item_service .img_service.il_1  {
+        width: 280px;
+    }
+    .item_service .img_service.il_2 {
+        width: 280px;
+    }
+    .item_service .img_service.il_3 {
+        width: 280px;
+    }
+    .about_info .nerds_il {
+        display: none;
+    }
+}
