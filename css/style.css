@@ -179,8 +179,9 @@ body {
 .orders ul {
     list-style-image: url(../img/ul.png);
 }
-::marker {
-    vertical-align: middle;
+.orders .vir > span {
+    position: relative;
+    top: 5px;
 }
 .order_item {
     display: flex;
