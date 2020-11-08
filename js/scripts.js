@@ -169,13 +169,17 @@ let day_year = 62;
  }
  switch(day) {
     case (day >=1 && day <=60) :
-         console.log('Зима');
+    console.log('Зима');
+    break;
     case (day >= 274 && day <= 366) :
-        console.log('Зима');
+    console.log('Зима');
+    break;
     case (day >= 60 && day <= 152) :
     console.log('Весна');
+    break;
     case (day >= 152 && day <= 244) :
     console.log('Лето');
+    break;
     default: console.log('Это количество дней больше года')
  }
  console.log(day);
