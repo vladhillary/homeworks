@@ -132,5 +132,18 @@ let sym = 0,
 //  }
 //  console.log (`max ${max}`);
 //  console.log (`min ${min}`);
+
 // task10
 console.log('task10');
+let n = 456,
+    sum__=0,
+    count=0;
+    n=String(n);
+    n=n.split('');
+    console.log(n.reverse());
+for (let i = 0; i < n.length; i++ ){
+    console.log(`Есть число ${n[i]}`);
+    count++;
+    sum__+=+n[i];
+    console.log(sum__);
+}console.log(`Всего цифр в числе ${count}, а сумма ${sum__}`);
