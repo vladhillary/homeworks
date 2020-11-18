@@ -85,23 +85,13 @@ for(i=0;i<arr9.length; i++){
 // task 10
 console.log('task10');
 let arr10 = [48,9,0,4,21,2,1,0,8,84,76,8,4,13,2];
-let sum = 0;
-for(i=0;i<arr.length;i++){
-    let z = arr10[i];
-    if (z == 0) {
-        console.log(arr10.indexOf(z));
-        break;
-    }
-}
-for (j=arr10.length-1;j>0;j--){
-    let c = arr10[i];
-    if (c == 0) {
-        console.log(arr10.lastIndexOf(c));
-        break;
-    }
-}for (g=2;g<=7;g++){
-    let y = 0;
-    let sum = 0;
-    sum = y + arr10[g];
-}console.log(sum);
-
+let sum10 = 0;
+let g=0;
+let k=0;
+console.log(arr10.indexOf(0));
+g=arr10.indexOf(0);
+console.log(arr10.lastIndexOf(0));
+k=arr10.lastIndexOf(0);
+for(i=g;i<k;i++){
+    sum10 +=arr10[i];
+}console.log(sum10);
