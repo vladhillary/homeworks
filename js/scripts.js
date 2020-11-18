@@ -66,25 +66,22 @@ while (true) {
 console.log(arr7.sort());
 console.log('task7');
 // task 8
+console.log('task8');
 let arr8 = [12, false, 'text', 4, 2, -5, 0];
 arr8.reverse;
 console.log(arr8);
-console.log('task8');
+
 
 // task 9
+console.log('task9');
 let arr9 = [5, 9, 21,,,9,78,,,,6];
 let sum_ =0;
-for(i=0;; i++){
-    if (i>arr9.length){
-        break;
-    }
-    let s=arr9[''];
-    if(s == undefined) {
+for(i=0;i<arr9.length; i++){
+ 
+    if(arr9[i] == undefined) {
         sum_+=1;
     }
 }console.log(sum_);
-console.log(arr9);
-console.log('task9');
 // task 10
 console.log('task10');
 let arr10 = [48,9,0,4,21,2,1,0,8,84,76,8,4,13,2];
