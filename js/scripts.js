@@ -60,20 +60,19 @@ console.log(str7.match(/ab+a/gi));
 // task 8 
 console.log('task 8:');
 function check(number){
- if (number == /^[+]\d{3}-\d{2}-\d{3}-\d{2}-\d{2}$/) {
+ if (/^[+]\d{3}-\d{2}-\d{3}-\d{2}-\d{2}$/.test(number)) {
     return true
  } else {
      return false
  }
 }
 console.log(check('+375-29-551-92-14'));
-// console.log('+375-29-551-92-14' == /^[+]\d{3}-\d{2}-\d{3}-\d{2}-\d{2}$/); почему false???
 
 // task 9
 console.log('task 9:');
 let email = 'vladhillary@gmail.com';
 function checkemail (){
-    if (email == /^[\w]{2,}@{1}[\w]{2,}.[\w]{2,11}$/i) { //почему опять false???
+    if (/^[\w]{2,}@{1}[\w]{2,}.[\w]{2,11}$/i.test(email)) { 
         return true;
     }else {
         return false
