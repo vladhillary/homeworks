@@ -75,7 +75,7 @@ function checkemail (){
     if (/^[\w]{2,}@{1}[\w]{2,}.[\w]{2,11}$/i.test(email)) { 
         return true;
     }else {
-        return false
+        return false;
     }
 }
 console.log(checkemail());
