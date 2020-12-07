@@ -49,6 +49,7 @@ style.innerHTML = `
     width: 400px;
     height: 480px;
     text-align:center;
+    border-radius: 10px;
 }
 .item1:hover{
     background-color:#8F75BE;
@@ -141,9 +142,9 @@ item1.appendChild(btn);
 
 let item2=item1.cloneNode(true);
 item2.firstChild.innerHTML = 'Studio';
-console.log(item2); // клонирование произошло! 
-// document.wrapper.appendChild(wrapper);               А выводить не хочет ни так, 
-// document.body.insertBefore(item2,wrapper);           ни так.
+console.log(item2); 
+wrapper.appendChild(item2);             
+
 
 
 
