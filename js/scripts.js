@@ -4,23 +4,23 @@ let taskList = function(){
 
 let toDoList = document.createElement('div'),
     wrapper = document.createElement('div');
-wrapper.style.cssText = 'margin: 50px 0px 0px 50px;width: 175px; height: 100%;';
+wrapper.style.cssText = 'margin: 50px 0px;width: 310px; height: 100%; background-color: #AD8762; padding-top: 5px;border-radius: 15px;';
 document.body.appendChild(wrapper);
 toDoList.innerHTML='ToDo List';
 wrapper.appendChild(toDoList);
-toDoList.style.cssText='margin: 50px 0px 5px 0px; background-color: blue; color: white; width: 175px; height: 20px; text-align:center; font-weight: bold;';
+toDoList.style.cssText='margin: 5px 0px; background-color: #AD8762; color: white; width: 300px; height: 20px; text-align:center; font-weight: bold; border-radius: 20px;';
 let input = document.createElement('input'),
     form = document.createElement('form');
     wrapper.appendChild(form);
     input.setAttribute('placeholder', 'type your task..');
     input.setAttribute('type', 'text');
     input.setAttribute('name', 'taskname');
-    input.style.cssText = 'width: 167px; margin-bottom: 5px;';
+    input.style.cssText = 'width: 292px; margin: 5px;';
     form.appendChild(input);
 let cleartask = document.createElement('button');
 cleartask.innerHTML='Clear Tasks';
 cleartask.setAttribute('type', 'clear');
-cleartask.style.cssText = 'width: 175px;  background-color: green; color: white;text-align:center; font-weight: bold; outline: none;'
+cleartask.style.cssText = 'width: 300px; background-color: green; color: white;text-align:center; font-weight: bold; outline: none; margin: 5px;'
 form.appendChild(cleartask);
 let sthis = this;
 let style = document.createElement('style');
@@ -30,8 +30,6 @@ style.innerHTML = `
     opacity: 0.33;
 }
 `
-
-
 //Event
 
 input.addEventListener('keydown', function(event){
@@ -46,27 +44,30 @@ input.addEventListener('keydown', function(event){
         let noUl = document.querySelector('ul');
         if (!noUl){
             elUl = document.createElement('ul');
-            elUl.style.cssText ='list-style-type:decimal;';
+            elUl.style.cssText ='list-style-type:decimal;padding: 0px 0px 10px 40px;';
             wrapper.appendChild(elUl);
             
         }
             elLi = document.createElement('li');
             elLi.innerHTML = `${task}`;
         elUl.appendChild(elLi);
-        elLi.style.cssText = 'position: relative;'
+        elLi.style.cssText = 'position: relative;';
         let checkbox = document.createElement('input');
         checkbox.setAttribute('type', 'checkbox');
-        checkbox.style.cssText = 'position: absolute; left: -40px;'
+        checkbox.style.cssText = 'position: absolute; left: -40px; ';
         elLi.appendChild(checkbox);
         checkbox.addEventListener('click', function(){
-            elLi.classList.toggle('.opa');
+            let par = checkbox.parentElement;
+            par.classList.toggle('opa');
         })
+    
         let edit = document.createElement('button');
-        edit.style.cssText = 'background-color: red; outline: none; height: 15px; width: 10px; margin-left: 5px;'
+        edit.style.cssText = 'background-color: red; border-radius: 50%; outline: none; height: 15px; width: 10px; margin-left: 5px;'
         elLi.appendChild(edit);
         edit.addEventListener('click', function(){
-            elLi.innerHTML=prompt('Изменение задачи');
-            elLi.appendChild(checkbox);
+            // let par2 = edit.previousSibling.previousSibling;
+             let par2 = edit.parentElement.firstChild;
+            par2.textContent=prompt('Изменение задачи');
         } )
     }
 //clear
