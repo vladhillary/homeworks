@@ -1,56 +1,56 @@
 let DOM = function(){
     
-    this.create = function(tagName = prompt('typeName')){
+    this.create = function(tagName){
         let createEl1 = document.createElement(`${tagName}`);
-        return console.log(createEl1);
+        return createEl1;
     }
     
-    this.attr = function(elem2 = prompt('type tagName'), name = prompt('type attribute'), value = prompt('type value')){
-        let createEl2 = document.createElement(`${elem2}`);
+    this.attr = function(element, name , value){
+        let createEl2 = document.createElement(`${element}`);
         createEl2.setAttribute(`${name}, ${value}`);
-        return console.log(createEl2);
+        return createEl2;
     }
-    this.html = function(elem3 = prompt('type tagName'), value = prompt('type value')){
+    this.html = function(elem3, value){
         let createEl3 = document.createElement(`${elem3}`);
-        createEl3.textContent = `${value}`; 
-        return document.write(`${createEl3}`); 
+        createEl3.innerHTML = `${value}`; 
+        return createEl3; 
     }
-    this.search = function(element = prompt('type tagName'), selector = prompt('type search')) {
-        element.querySelector(selector);
-        return element.querySelector(selector);
+    this.search = function(selector, element) {
+        let elbody;
+        if(document.body.querySelector(selector)) {
+            return elbody = document.body.querySelector(selector);
+        } else return element.querySelector(selector);
     }
-    this.addClass = function(elem5 = prompt('type tagName'), className = prompt('type className')){
-        let createEl5 = document.createElement(`${elem5}`);
+    this.addClass = function(elem5, className){
+        let createEl5 = document.querySelector(elem5);
         createEl5.classList.add(`${className}`);
-        return console.log(createEl5);
+        return createEl5;
     }
-    this.removeClass = function(elem6 = prompt('type tagName'), className = prompt('type className')){
-        let createEl6 = document.createElement(`${elem6}`);
+    this.removeClass = function(elem6 , className){
+        let createEl6 = document.querySelector(elem6);
         createEl6.classList.remove(`${className}`);
-        return console.log(createEl6);
     }
-    this.toggleClass = function(elem7 = prompt('type tagName'), className = prompt('type className')){
-        let createEl7 = document.createElement(`${elem7}`);
+    this.toggleClass = function(elem7, className){
+        let createEl7 = document.querySelector(`${elem7}`);
         createEl7.classList.toggle(`${className}`);
-        if(confirm('переключить toggle?')) createEl7.classList.toggle(`${className}`);
-        return console.log(createEl7);
     }
-    this.hasClass = function(element, className = prompt('type className')){
-        let searchhas = element.querySelector(`.${className}`),
+    this.hasClass = function(element, className){
+        let searchhas = element.classList.contains(className),
             has;
-        if(searchhas != true){
-            has = true
+        if(searchhas == true){
+            has = true;
         } else false;
-        console.log(has);
+        return has;
     }
     
     this.append = function(element, newElement, beforeElement){
 
-        if(beforeElement != undefined) {element.insertBefore(newElement, beforeElement)
+        if(beforeElement != undefined) {
+            element.insertBefore(newElement, beforeElement)
         } else element.appendChild(newElement);
         
     }
-    this.on = function(element, eventname, funcName){
+    this.on = function(element, eventName, funcName){
         element.addEventListener(eventName, function() {
             funcName();
         });
@@ -61,11 +61,11 @@ let DOM = function(){
 
 
 let test = new DOM();
-// test.create();
-// test.attr(); error
-// test.html(); error
-// test.addClass();
-// test.toggleClass();
-// test.hasClass();
+test.create();
+test.attr(); 
+test.html();
+test.addClass();
+test.toggleClass();
+test.hasClass();
 test.append();
 test.on();
