@@ -1,0 +1,21 @@
+@media (max-width: 400px){
+    .app {
+        width: 320px;
+    }
+    input{
+        width: 220px;
+    }
+    .btn_add{
+        width: 134px;
+        height: 30px;
+    }
+    .btn_remove{
+        width: 270px;
+    }
+    .btn_call, .btn_edit{
+        width: 118px;
+    }
+    .btn_clear{
+        height: 30px;
+    }
+}
